@@ -1,0 +1,366 @@
+body {
+  background: #FAFAFA;
+}
+
+h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6d73e3;
+  margin-bottom: 30px;
+}
+
+.home-articles {
+
+  margin-bottom: 50px;
+
+  .main-article {
+    margin-bottom: 50px;
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 46px;
+
+      a {
+        color: #000;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #6d73e3;
+          text-decoration: none;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 46px;
+        line-height: 59px;
+      }
+    }
+
+    .excerpt {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .categories {
+      .category-link {
+        font-size: 10px;
+        line-height: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #6d73e3;
+      }
+    }
+  }
+
+  .main-article-image {
+    img {
+      max-width: 100%;
+    }
+
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 30px;
+    }
+  }
+
+  .secondary-article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+
+    .secondary-article-image {
+      padding-bottom: 100%;
+      //height: 300px;
+      background-size: cover;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      @include media-breakpoint-down(sm) {
+        height: 250px;
+        padding: 0;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        .excerpt {
+          font-style: italic;
+          font-size: 14px;
+          line-height: 22px;
+          padding-top: 6px;
+          margin-bottom: 6px;
+          color: #fff;
+        }
+
+        .categories {
+          .category-link {
+            font-size: 10px;
+            line-height: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #6d73e3;
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+
+      a {
+        color: #000;
+      }
+    }
+
+    &:hover {
+      .secondary-article-image .overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.spotlight-holder {
+  margin-bottom: 30px;
+  background: #6d73e3;
+  padding: 30px 0 80px;
+
+  h2 {
+    color: #fff;
+  }
+
+}
+
+.weekly-love-items {
+  margin-bottom: 60px;
+
+  .weekly-love-item {
+
+    display: flex;
+    align-items: center;
+    margin-left: -40px;
+    margin-bottom: 10px;
+
+
+    .number {
+      flex: 0 0 40px;
+      font-weight: 700;
+      color: #B5B5B5;
+      font-size: 12px;
+      line-height: 23px;
+      //padding: 4px 0 0 0;
+    }
+
+    .content {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 23px;
+      padding: 5px 0;
+    }
+  }
+}
+
+.highlight-items {
+
+  .highlight-item {
+
+    margin-bottom: 30px;
+
+
+    .highlight-content {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 23px;
+      padding: 0 0 0 14px;
+      border-left: #B5B5B5 solid 1.5px;
+      margin: 0 0 8px -16px;
+    }
+
+    .highlight-origin {
+      font-weight: 700;
+      color: #B5B5B5;
+      font-size: 10px;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+.spotlight-items {
+  .spotlight-item {
+
+
+    .spotlight-article-image {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 59px;
+      color: #fff;
+      text-transform: none;
+
+
+      a {
+        color: #fff;
+
+      }
+    }
+
+    .excerpt {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 6px;
+      margin-bottom: 6px;
+    }
+
+
+  }
+
+  .slick-dots {
+    padding: 0 0 0 20px;
+    margin-left: 66.66666%;
+    margin-top: -22px;
+    position: relative;
+    z-index: 10;
+
+
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0 17px 0 0;
+      float: left;
+
+      button {
+        font-size: 0;
+        border: none;
+        outline: none;
+        background: #DADADA;
+        width: 66px;
+        height: 4px;
+        cursor: pointer;
+      }
+
+      &.slick-active button {
+        background: #000;
+      }
+    }
+  }
+
+}
+
+.else-items {
+
+  .else-item {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    .else-item-article-image {
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: cover;
+      margin-bottom: 15px;
+    }
+
+    .else-item-article-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+
+      a {
+        color: #000;
+      }
+    }
+
+
+    .else-item-article-excerpt {
+
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 22px;
+      padding-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .else-item-article-categories {
+      margin-bottom: 5px;
+      .category-link {
+        font-size: 10px;
+        line-height: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #6d73e3;
+      }
+    }
+
+    .else-item-article-meta {
+      font-size: 12px;
+      color: #B5B5B5;
+      font-style: italic;
+    }
+  }
+
+  .else-item-full {
+    height: 100%;
+  }
+
+
+}
+
+article.type-post {
+  h1 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: #000000;
+  }
+
+  .entry-content {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 27px;
+
+  }
+}

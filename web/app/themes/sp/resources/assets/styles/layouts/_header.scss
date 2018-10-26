@@ -1,0 +1,43 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+header.banner {
+  padding-top: 20px;
+  margin-bottom: 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .brand {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6d73e3;
+    letter-spacing: 1px;
+  }
+
+  .menu-main-menu-container {
+    a {
+      margin: -5px 5px 0 5px;
+      padding: 5px 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #B5B5B5;
+      border: 1px solid  #fff;
+      transition: border 0.3s;
+
+
+      &:hover {
+        border: 1px solid  #6d73e3;
+      }
+    }
+  }
+}
